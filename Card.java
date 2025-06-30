@@ -13,7 +13,6 @@ public class Card{
     public void setSuit(String suit) {
         this.suit = suit;
     }
-    @SuppressWarnings("ConvertToStringSwitch")
     private int setvalue(String rank){
         if (rank.equals("Ace")) {
             return 11;
