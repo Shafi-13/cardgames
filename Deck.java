@@ -114,8 +114,11 @@ public class Deck{
     public void shuffle() {
         java.util.Collections.shuffle(deck);
     }
-    public void showDeck() {
-        System.out.println(deck);
+    public ArrayList<Card> showDeck() {
+        return this.deck;
+    }
+    public Card topCard(){
+        return deck.get(0);
     }
     public Card dealCard() {
         if (deck.isEmpty()) {
