@@ -1,6 +1,8 @@
 public class Card{
     private String suit;
     private String rank;
+    @SuppressWarnings("FieldMayBeFinal")
+    private String name;
     private int value;
         public void setValue(int value) {
         this.value = value;
@@ -24,6 +26,7 @@ public class Card{
         }
     }
     public Card(String suit, String rank){
+        this.name = rank + " of " + suit;
         this.suit = suit;
         this.rank = rank;
         this.value = setvalue(rank);
@@ -36,5 +39,9 @@ public class Card{
     }
     public int getValue() {
         return value;
+    }
+
+    public String getName() {
+        return name;
     }
 }
