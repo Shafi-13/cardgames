@@ -15,7 +15,6 @@ public class Card{
     public void setSuit(String suit) {
         this.suit = suit;
     }
-    @SuppressWarnings("ConvertToStringSwitch")
     private int setvalue(String rank){
         if (rank.equals("Ace")) {
             return 11;
@@ -40,8 +39,12 @@ public class Card{
     public int getValue() {
         return value;
     }
+<<<<<<< HEAD
 
     public String getName() {
         return name;
     }
 }
+=======
+}
+>>>>>>> 9fc501489abb199a9a167baa6b966512a5494c7b
