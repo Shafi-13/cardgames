@@ -41,6 +41,8 @@ public class Blackjack{
         if (winner == null) {
             return "No winner, all players busted.";
         }
+        else{
         return (winner + " is the winner");
+        }
     }
 }
