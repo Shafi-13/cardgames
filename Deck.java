@@ -56,8 +56,9 @@ public class Deck{
     Card KingOfClubs = new Card("Clubs", "King");
     @SuppressWarnings("FieldMayBeFinal")
     private ArrayList<Card> deck;
-    public Deck() {
+    public Deck(int numDecks) {
         deck = new ArrayList<>();
+        for (int i = 0; i < numDecks; i++) {
         deck.add(AceOfSpades);
         deck.add(TwoOfSpades);
         deck.add(ThreeOfSpades);
@@ -109,7 +110,8 @@ public class Deck{
         deck.add(TenOfClubs);
         deck.add(JackOfClubs);
         deck.add(QueenOfClubs);
-        deck.add(KingOfClubs);        
+        deck.add(KingOfClubs);
+        }
     }
     public void shuffle() {
         java.util.Collections.shuffle(deck);
