@@ -116,11 +116,10 @@ public class Deck{
     public void shuffle() {
         java.util.Collections.shuffle(deck);
     }
-    public ArrayList<Card> showDeck() {
-        return this.deck;
-    }
-    public Card topCard(){
-        return deck.get(0);
+    public void stack() {
+        java.util.Collections.shuffle(deck);
+        deck.add(0, AceOfSpades);
+        deck.add(1, JackOfSpades);
     }
     public Card dealCard() {
         if (deck.isEmpty()) {
