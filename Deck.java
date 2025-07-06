@@ -125,7 +125,10 @@ public class Deck{
         if (deck.isEmpty()) {
             return null; // No cards left to deal
         }
-        return deck.remove(deck.size() - 1); // Deal the top card
+        Card topCard = deck.get(0);
+        deck.remove(0); 
+        deck.trimToSize();
+        return topCard; // Deal the top card
     }
         
     

@@ -23,8 +23,8 @@ public class Blackjack{
         return ((hand.size()==2) && (hand.get(0).getRank().equals("Ace") || hand.get(1).getRank().equals("Ace")) && (hand.get(0).getName().equals("Jack of Spades")||hand.get(0).getName().equals("Jack of Clubs")||hand.get(1).getName().equals("Jack of Spades")||hand.get(1).getName().equals("Jack of Clubs")));
     }
 
-    public String winner (ArrayList<Player> players){
-        Player winner; 
+    public Player winner (ArrayList<Player> players){
+        Player winner = null; 
 
         for (Player player : players) {
             if (isBust(score(player.getHand()))) {
@@ -35,14 +35,8 @@ public class Blackjack{
         for (Player player :players){
             if (score(player.getHand()) > score(winner.getHand())) {
                 winner = player;
+            }
         }
-        }
-
-        if (winner == null) {
-            return "No winner, all players busted.";
-        }
-        else{
-        return (winner + " is the winner");
-        }
+        return winner;
     }
 }
