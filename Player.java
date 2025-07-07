@@ -23,10 +23,13 @@ public class Player{
         hand.add(card);
     }
     public void addbalance(int amount){
-        balance += amount;
+        this.balance += amount;
     }
     public void bet(int amount){
-        balance -= amount;
+        this.balance -= amount;
+    }
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
     public int showbalance(){
         return balance;

@@ -23,20 +23,29 @@ public class Blackjack{
         return ((hand.size()==2) && (hand.get(0).getRank().equals("Ace") || hand.get(1).getRank().equals("Ace")) && (hand.get(0).getName().equals("Jack of Spades")||hand.get(0).getName().equals("Jack of Clubs")||hand.get(1).getName().equals("Jack of Spades")||hand.get(1).getName().equals("Jack of Clubs")));
     }
 
-    public Player winner (ArrayList<Player> players){
-        Player winner = null; 
+    public void winner (ArrayList<Player> players, ArrayList<String> playerNames){
+        Player winner = null;  
 
         for (Player player : players) {
             if (isBust(score(player.getHand()))) {
-                players.remove(player);
+                continue;
             }
-        }
-        winner = players.get(0);
-        for (Player player :players){
-            if (score(player.getHand()) > score(winner.getHand())) {
+            if (isBlackjack(player.showbalance(), player.getHand())) {
+                    winner = player;
+            }
+            if (winner != null && player.showbalance()<21 && player.showbalance() > winner.showbalance()) {
+                winner = player;
+            }
+            if (winner == null && !isBust(player.showbalance())) {
                 winner = player;
             }
         }
-        return winner;
+        if (winner == null) {
+            System.out.println("No winner, all players busted.");
+        } 
+        else {
+            int index = players.indexOf(winner);
+            System.out.println("The winner is: " + playerNames.get(index) + " with a score of " + score(winner.getHand()));
+        }
     }
 }

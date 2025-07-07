@@ -21,11 +21,11 @@ public class GameBJ {
         System.out.println("Users: "+playerNames + " are playing the game");
         Blackjack bj = new Blackjack();
         Deck deck = new Deck(players.size());
-        deck.stack();
+        deck.shuffle();
         for (Player x : players) {
             x.draw(deck.dealCard());
             x.draw(deck.dealCard());
-            x.addbalance(bj.score(x.getHand()));
+            x.setBalance(bj.score(x.getHand()));
         }
         System.out.println("The players have been dealt their cards.");
         for (int i = 0; i < players.size(); i++) {
@@ -46,7 +46,7 @@ public class GameBJ {
                 }
                 if (choice.equals("h")){
                     players.get(i).draw(deck.dealCard());
-                    players.get(i).addbalance(bj.score(players.get(i).getHand()));
+                    players.get(i).setBalance(bj.score(players.get(i).getHand()));
                     players.get(i).showHand();
                     if (bj.isBust(players.get(i).showbalance())) {
                         System.out.println(playerNames.get(i) + " has busted");
@@ -61,13 +61,6 @@ public class GameBJ {
                 
             }
         }
-        if (bj.winner(players) == null) {
-            System.out.println("No winner, all players busted.");
-        } 
-        else {
-            Player winner = bj.winner(players);
-            int winnerIndex = players.indexOf(winner);
-            System.out.println(playerNames.get(winnerIndex) + " is the winner with a score of " + winner.showbalance() + "!");
-        }
+        bj.winner(players,playerNames);
     }
 }
