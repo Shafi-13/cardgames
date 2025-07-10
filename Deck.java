@@ -57,6 +57,9 @@ public class Deck{
     @SuppressWarnings("FieldMayBeFinal")
     private ArrayList<Card> deck;
     public Deck(int numDecks) {
+        if (numDecks < 1) {
+            numDecks = 1;
+        }
         deck = new ArrayList<>();
         for (int i = 0; i < numDecks; i++) {
         deck.add(AceOfSpades);

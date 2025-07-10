@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GameBJ {
-    public static void main(String[] args) {
+    public void startbj() {
         System.out.println("Welcome to Blackjack!");
         Scanner intput = new Scanner(System.in);
         Scanner Strinput = new Scanner(System.in);
