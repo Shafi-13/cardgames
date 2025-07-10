@@ -20,7 +20,7 @@ public class GameBJ {
         }
         System.out.println("Users: "+playerNames + " are playing the game");
         Blackjack bj = new Blackjack();
-        Deck deck = new Deck(players.size());
+        Deck deck = new Deck(players.size()/4);
         deck.shuffle();
         for (Player x : players) {
             x.draw(deck.dealCard());
