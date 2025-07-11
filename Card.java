@@ -4,6 +4,7 @@ public class Card{
     @SuppressWarnings("FieldMayBeFinal")
     private String name;
     private int value;
+    private int pokerval;
         public void setValue(int value) {
         this.value = value;
     }
@@ -25,11 +26,12 @@ public class Card{
             return Integer.parseInt(rank);
         }
     }
-    public Card(String suit, String rank){
+    public Card(String suit, String rank, int pokerval) {
         this.name = rank + " of " + suit;
         this.suit = suit;
         this.rank = rank;
         this.value = setvalue(rank);
+        this.pokerval = pokerval;
     }  
     public String getSuit() {
         return suit;
@@ -43,6 +45,14 @@ public class Card{
 
     public String getName() {
         return name;
+    }
+
+    public int getPokerval() {
+        return pokerval;
+    }
+
+    public void setPokerval(int pokerval) {
+        this.pokerval = pokerval;
     }
 }
 

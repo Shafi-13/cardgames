@@ -3,8 +3,10 @@ import java.util.ArrayList;
 public class Player{
         private ArrayList<Card> hand;
         private int balance;
-        public Player (int balance){
+        private int score;
+        public Player (int balance) {
             this.balance = balance;
+            this.score = 0;
             this.hand = new ArrayList<>();
         }
     public ArrayList<Card> getHand() {
@@ -33,5 +35,11 @@ public class Player{
     }
     public int showbalance(){
         return balance;
+    }
+    public void setscore(int score) {
+        this.score = score;
+    }
+    public int getscore() {
+        return score;
     }
 }
