@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 
 public class Deck{
-    Card AceOfSpades = new Card("Spades", "Ace",1);
+    Card AceOfSpades = new Card("Spades", "Ace",14);
     Card TwoOfSpades = new Card("Spades", "2",2);
     Card ThreeOfSpades = new Card("Spades", "3",3);
     Card FourOfSpades = new Card("Spades", "4",4);
@@ -15,7 +15,7 @@ public class Deck{
     Card JackOfSpades = new Card("Spades", "Jack",11);
     Card QueenOfSpades = new Card("Spades", "Queen",12);
     Card KingOfSpades = new Card("Spades", "King",13);
-    Card AceOfHearts = new Card("Hearts", "Ace",1);
+    Card AceOfHearts = new Card("Hearts", "Ace",14);
     Card TwoOfHearts = new Card("Hearts", "2",2);
     Card ThreeOfHearts = new Card("Hearts", "3",3);
     Card FourOfHearts = new Card("Hearts", "4",4);
@@ -28,7 +28,7 @@ public class Deck{
     Card JackOfHearts = new Card("Hearts", "Jack",11);
     Card QueenOfHearts = new Card("Hearts", "Queen",12);
     Card KingOfHearts = new Card("Hearts", "King",13);
-    Card AceOfDiamonds = new Card("Diamonds", "Ace",1);
+    Card AceOfDiamonds = new Card("Diamonds", "Ace",14);
     Card TwoOfDiamonds = new Card("Diamonds", "2",2);
     Card ThreeOfDiamonds = new Card("Diamonds", "3",3);
     Card FourOfDiamonds = new Card("Diamonds", "4",4);
@@ -41,7 +41,7 @@ public class Deck{
     Card JackOfDiamonds = new Card("Diamonds", "Jack",11);
     Card QueenOfDiamonds = new Card("Diamonds", "Queen",12);
     Card KingOfDiamonds = new Card("Diamonds", "King",13);
-    Card AceOfClubs = new Card("Clubs", "Ace",1);
+    Card AceOfClubs = new Card("Clubs", "Ace",14);
     Card TwoOfClubs = new Card("Clubs", "2",2);
     Card ThreeOfClubs = new Card("Clubs", "3",3);
     Card FourOfClubs = new Card("Clubs", "4",4);

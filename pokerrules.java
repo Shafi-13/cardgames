@@ -1,3 +1,6 @@
+
+import java.util.Collections;
+
 class pokerrules{
     private int pot;
     public void bet(int amount) {
@@ -13,5 +16,21 @@ class pokerrules{
         int w = this.pot;
         this.pot = 0;
         return w;
+    }
+    public void isflush(Player hand) {
+        String suit = hand.getHand().get(0).getSuit();
+        boolean flush = true;
+        for (Card card : hand.getHand()) {
+            if (!card.getSuit().equals(suit)) {
+                flush = false;
+            }
+        }
+        if (flush){
+            int value;
+            Collections.sort(hand.getcardvalue());
+            value = hand.getcardvalue().getLast();
+            hand.setpokerhand(5);
+            hand.setscore(value);
+        }
     }
 }

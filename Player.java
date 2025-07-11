@@ -4,10 +4,14 @@ public class Player{
         private ArrayList<Card> hand;
         private int balance;
         private int score;
+        private int pokerhand;
+        private ArrayList<Integer> cardvalue; 
         public Player (int balance) {
             this.balance = balance;
             this.score = 0;
             this.hand = new ArrayList<>();
+            this.pokerhand = 0;
+            this.cardvalue = new ArrayList<>();
         }
     public ArrayList<Card> getHand() {
         return hand;
@@ -23,6 +27,7 @@ public class Player{
     }
     public void draw(Card card){
         hand.add(card);
+        cardvalue.add(card.getValue());
     }
     public void addbalance(int amount){
         this.balance += amount;
@@ -41,5 +46,19 @@ public class Player{
     }
     public int getscore() {
         return score;
+    }
+    public void setpokerhand(int pokerhand) {
+        this.pokerhand = pokerhand;
+    }
+    public int whathand(){
+        return pokerhand;
+    }
+
+    public ArrayList<Integer> getcardvalue() {
+        return cardvalue;
+    }
+
+    public void setCardvalue(ArrayList<Integer> cardvalue) {
+        this.cardvalue = cardvalue;
     }
 }
