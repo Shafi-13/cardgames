@@ -4,6 +4,9 @@ import java.util.Collections;
 
 class pokerrules{
     private int pot;
+    public void setpot(int pot) {
+        this.pot = pot;
+    }
     public void bet(int amount) {
         if (amount > 0) {
             this.pot += amount;

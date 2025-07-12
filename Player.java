@@ -6,6 +6,13 @@ public class Player{
         private int score;
         private int pokerhand;
         private ArrayList<Integer> cardvalue; 
+        private boolean fold = false;
+        public void fold() {
+            this.fold = true;
+        }
+        public Boolean isFolded() {
+            return fold;
+        }
         public Player (int balance) {
             this.balance = balance;
             this.score = 0;
