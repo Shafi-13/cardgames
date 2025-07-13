@@ -173,7 +173,7 @@ class pokerrules{
         }
         if (counter1 == 1 && counter2 == 1) {
             hand.setpokerhand(0);
-            hand.setscore(cardvalues.getLast());
+            hand.setscore(cardvalues.get(0));
         }
     }
 }
